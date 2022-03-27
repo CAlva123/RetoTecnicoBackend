@@ -32,7 +32,7 @@ namespace RetoBackendBCP.Controllers
         {
             return await divisaRepository.all();
         }
-        [HttpPost("cambioDivisa")]
+        [HttpGet("cambioDivisa")]
         public async Task<ActionResult<DivisaResponse>> find(DivisaRequest request)
         {
             var validation = divisaValidator.Validate(request);
